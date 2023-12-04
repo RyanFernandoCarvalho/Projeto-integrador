@@ -1,0 +1,62 @@
+<section class="hero">
+    <section class="transparency">
+    <p>OLÁ! BEM VINDO AO<br><span>E-Trashway</span><br>A E-Trashway é uma empresa responsável pela coleta de lixo Eletrônico, auxiliando no descarte correto aonde quer que você esteja, independente do E-lixo que queira descartar!</p>
+    </section>
+</section>
+<article class="secArticle">
+    <h1>Plataforma E-Trashway</h1>
+    <p>A E-trashway está comprometida em facilitar a gestão de resíduos para empresas de todos os portes.</p>
+    <a href="/register"><button class="registerBtn register">Cadastre-se</button></a>
+    <a href="/login"><button class="loginBtn login">Entre aqui</button></a>
+</article>
+{{!-- <div class="box1">
+    <section class="transparency2">
+    <h1>Comece agora!</h1>
+    {{#if session.userId}}
+    <button class="btn calc">Calcule frete</button>
+    {{else}}
+    <a href="/login"><button class="btn calc">Calcule frete</button></a>
+    {{/if}}
+    </section>
+</div> --}}
+<iframe class="box1" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62941.962574517514!2d-35.751342756221234!3d-9.606231653604695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle%20maps%20pontos%20de%20descarte%20de%20lixo%20eletr%C3%B4nico!5e0!3m2!1spt-BR!2sbr!4v1701690411762!5m2!1spt-BR!2sbr" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+{{#if session.userId}}
+{{else}}
+<section class="transparency2">
+<h1>Comece agora!</h1>
+<a href="/login"><button class="btn calc">Calcule frete</button></a>
+</section>
+{{/if}}
+<div class="box2">
+    <section class="info">
+        <section class="sobre">
+        <img src="/svgs/Group 27.svg" alt="">
+        <p>Sobre nós</p>
+        </section>
+        <article>
+           <p>Saiba como começamos, o que nos impulsionou e a maneira como criamos oportunidades globalmente.</p>
+        </article>
+        <a href="/e_trashway/about">Saiba mais sobre a <span>E-Trashway</span></a>
+    </section>
+    <section class="info">
+       <section class="sobre">
+        <img src="/svgs/Vector-1.svg" alt="">
+        <p>Contato</p>
+        </section>
+        <article>
+           <p>Entre em contato para saber mais. Estamos prontos para responder às suas perguntas e explorar possíveis colaborações.</p>
+        </article>
+         <a href="/e_trashway/contact">Entre em contato conosco</a>
+    </section>
+    <section class="info">
+       <section class="sobre">
+        <img src="/svgs/Vector.svg" alt="">
+        <p>Feedback</p>
+        </section>
+        <article>
+            <p>Compartilhe e veja os feedbacks sobre nossa empresa. Sua opinião é fundamental para nós. Estamos aqui para ouvir!</p>
+        </article>
+         <a href="/e_trashway/feedback">Fique por dentro dos resultados</a>
+    </section>
+</div>

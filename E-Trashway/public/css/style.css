@@ -1,0 +1,429 @@
+:root{
+    --white: #fff;
+    --black: #000;
+    --gray-400: #d9d9d9;
+    --gray-200: rgba(217, 217, 217, .7);
+    --gray-500: #b8b6b6;
+    --gray-700: #A0A0A0;
+    --blue-600: #092F32;
+    --blue-200:#00B2A8;
+    --blue-100:#2AC9A3;
+    --yellow:#B3F00D;
+    --modal-background: rgb(0,0,0,.44);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "inria sans", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de navegação */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 1.4rem 1.4rem .8rem;
+    background-color: var(--blue-600);
+}
+
+.navbar section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .brand {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    background-color: var(--gray-400);
+}
+
+.navbar h1 {
+    margin-left: .8rem;
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    column-gap: 1rem;
+}
+
+.navbar ul li a { 
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.3rem;
+    
+}
+.navbar ul li a:hover { 
+    text-decoration: none;
+    color: var(--blue-200);
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+
+/* Rodapé da aplicação */
+footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.3rem;
+    padding: 4rem 0;
+    background-color: var(--yellow);
+    margin-top: auto;
+}
+.footer .icon {
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+
+/* Seção hero da aplicação */
+.hero{
+    background-image: url(../svgs/image\ 9.svg);
+    height: 975.6px;
+    font-size: 1.1rem; 
+    background-size: cover;
+}
+.transparency{
+    backdrop-filter:blur(10px) brightness(50%);
+    padding: 100px;
+    width: 100%;
+    height: 100%;
+}
+.hero p {
+    width: 40rem;
+    color: var(--white);
+    margin-top: 215px;
+}
+
+.hero span {
+    font-size: 4.7rem;
+    font-weight: bold;
+    line-height: 6rem;
+    color:var(--white);
+}
+button {
+    width: 6.6875rem;
+    height: 2.25rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    color: var(--white);
+    border: none;
+    margin-top: .5rem;
+    cursor: pointer;
+    background-color: var(--blue-200);
+}
+.loginBtn {
+    background-color: var(--blue-600);
+    border: 1px solid var(--white);
+    margin-left: .5rem;
+}
+
+/* Artigo de descrição */
+.secArticle {
+    background-color: var(--white);
+    padding: 5rem 0 9rem 7.6rem;
+    height: 553px;
+}
+
+.secArticle h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-top: 75px;
+}
+
+.secArticle p {
+    font-size: 1.1rem;
+    width: 46rem;
+}
+
+/* Modais de autenticação */
+/* Modal de registro */
+.authModal {
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    background-color: var(--modal-background);
+}
+
+.formDiv {
+    text-align: center;
+    background-color: var(--gray-400);
+    width: 30rem;
+    border-radius: 74px;
+    border: 1px solid var(--black);
+    padding: 2.2rem 4rem 5rem;
+    margin: 5rem auto;
+}
+
+.formDiv h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.2rem;
+}
+
+.formDiv form {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-weight: bold;
+}
+
+.formDiv input {
+    height: 3rem;
+    border-radius: 35px;
+    border: 1px solid var(--black);
+    outline: none;
+    font-size: 1rem;
+    padding-left: .7rem;
+    margin: .2rem 0 .6rem;
+}
+
+.formDiv input[type='submit'], .forgotPassBtn {
+    height: 2rem;
+    font-weight: bold;
+    width: 10rem;
+    margin: 1.3rem auto 0;
+    padding: 0;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.formDiv p {
+    font-size: .8rem;
+    margin-top: .9rem;
+}
+
+.alterModal {
+    color: var(--blue-300);
+    cursor: pointer;
+}
+
+/* Modal de login */
+
+.forgotPassBtn {
+    margin-top: .6rem;
+    color: var(--black);
+}
+
+/* Flash messages */
+.message {
+    padding: 1rem 0;
+    position: relative;
+    text-align: center;
+    width: 20rem;
+    border-radius: 20px;
+    background-color: var(--gray-200);
+    border: 1px solid var(--black);
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    z-index: 1000;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+.message .icon {
+    position: absolute;
+    top: 1px;
+    right: 6px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.box1{
+    background-image: url(../svgs/image\ 3.svg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 914px;
+    color: var(--white);
+    font-size: 44px;
+}
+.transparency2{
+    backdrop-filter:blur(10px) brightness(50%);
+    width: 100%;
+    height: 914px;
+    display: flex;
+    position: relative;
+    margin-top: -914px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box1 button{
+    background-color: var(--blue-200);
+}
+.box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 613px;
+    padding: 95px;
+}
+.box2 p{
+    font-size: 1.1rem;
+    width: 13rem;
+}
+.info{
+    display: flex;
+    flex-direction:column;
+}
+.sobre{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.box2 article{
+    color: var(--gray-500);
+    padding: 20px;
+}
+.info a{
+    color: var(--gray-500);
+}
+.info span{
+    color: var(--gray-700);
+    font-weight: bold;
+}
+.secArticle2{
+    background-color: var(--yellow);
+    height: 480px;
+    padding: 150px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.secArticle2 h1{
+    font-size: 44px;
+}
+.secArticle2 p{
+    font-size: large;
+}
+.secArticle3{
+    background-color: var(--white);
+    height: 480px;
+    padding: 150px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.secArticle3 h1{
+    font-size: 44px;
+}
+.secArticle3 p{
+    font-size: large;
+}
+.secArticle4{
+    background-color: var(--white);
+    height: 480px;
+    padding: 150px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.secArticle4 h1{
+    font-size: 44px;
+}
+.secArticle4 p{
+    font-size: large;
+}
+.secArticle4 button{
+    background-color: var(--blue-600);
+    border: 1px solid var(--white);
+    height: 50px;
+    text-align: center;
+}
+.perfis{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-600);
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: end;
+}
+.perfis section {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    text-align: center;
+    align-items:center ;
+    gap: 30px;
+}
+.company-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5.5rem;
+}
+.company-main form{
+    display: flex;
+    flex-direction: column;
+    width: 185px;
+    gap: 10px;
+}
+.pesquisa{
+    border-radius: 10px;
+    padding: 3px;
+}
+.company-info{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+    gap: 20px;
+}
+.contact-main{
+    display: flex;
+    flex-direction: column;
+    margin: 5.5rem;
+    justify-content: center;
+}
+.comment-main{
+    display: flex;
+    flex-direction: column;
+    margin: 5.5rem 9rem 3rem;
+    justify-content: center;
+}
+.comments{
+    display: flex;
+    flex-direction: column;
+}
+.comments section{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 20px;
+    align-items: center;
+}
+.comments input{
+    background-color: var(--blue-600);
+    color: var(--white);
+    width: 50px;
+    border-radius: 10px;
+    padding: 5px;
+}

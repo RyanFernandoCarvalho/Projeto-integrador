@@ -1,0 +1,15 @@
+<div id="formBox" class="formDiv">
+        <h1>Cadastre-se</h1>
+        <form action="/register" method="post">
+            <label for="name">Nome completo:</label>
+            <input type="text" name="name" placeholder="Digite seu nome" value="{{name}}" required>
+            <label for="email">Endereço de Email:</label>
+            <input type="email" name="email" placeholder="Digite seu endereço de e-mail" value="{{email}}" required>
+            <label for="password">Senha</label>
+            <input type="password" name="password" placeholder="Digite sua senha" value="{{password}}" required>
+            <label for="passwordConfirm">Confirmação de senha:</label>
+            <input type="password" name="passwordConfirm" placeholder="Confirme sua senha" value="{{passwordConfirm}}" required>
+            <input type="submit" value="Avançar">
+        </form>
+        <p>Já tem uma conta? <span class="alterModal login"><a href="/login">Entre agora!</a></span></p>
+    </div>

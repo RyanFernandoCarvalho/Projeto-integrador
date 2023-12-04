@@ -1,0 +1,24 @@
+<div class="company-main">
+    <h1>SELECIONE A EMPRESA DE SUA PREFERENCIA</h1>
+
+    <form action="">
+        <input class="pesquisa" name="search" type="search" placeholder="Pesquise aqui">
+
+        <span class="result">resultados</span>
+    </form>
+    {{#each companies}}
+    {{#with this}}
+    <div class="company-info">
+        <section>
+            <img src="/svgs/{{image}}" alt="">
+        </section>
+        <article>
+        <h1>{{name}}</h1>
+        <p>{{functionTime}}</p>
+        <p>{{status}}</p>
+        <p>{{phone}}</p>
+        </article>
+    </div>
+    {{/with}}
+    {{/each}}
+</div>
